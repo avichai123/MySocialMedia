@@ -1,0 +1,12 @@
+C:\MyWorks\C# net\SocialMedia\MySocialMedia\MySocialMedia.Common\bin\Debug\net8.0\MySocialMedia.Common.deps.json
+C:\MyWorks\C# net\SocialMedia\MySocialMedia\MySocialMedia.Common\bin\Debug\net8.0\MySocialMedia.Common.dll
+C:\MyWorks\C# net\SocialMedia\MySocialMedia\MySocialMedia.Common\bin\Debug\net8.0\MySocialMedia.Common.pdb
+C:\MyWorks\C# net\SocialMedia\MySocialMedia\MySocialMedia.Common\obj\Debug\net8.0\MySocialMedia.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\MyWorks\C# net\SocialMedia\MySocialMedia\MySocialMedia.Common\obj\Debug\net8.0\MySocialMedia.Common.AssemblyInfoInputs.cache
+C:\MyWorks\C# net\SocialMedia\MySocialMedia\MySocialMedia.Common\obj\Debug\net8.0\MySocialMedia.Common.AssemblyInfo.cs
+C:\MyWorks\C# net\SocialMedia\MySocialMedia\MySocialMedia.Common\obj\Debug\net8.0\MySocialMedia.Common.csproj.CoreCompileInputs.cache
+C:\MyWorks\C# net\SocialMedia\MySocialMedia\MySocialMedia.Common\obj\Debug\net8.0\MySocialMedia.Common.sourcelink.json
+C:\MyWorks\C# net\SocialMedia\MySocialMedia\MySocialMedia.Common\obj\Debug\net8.0\MySocialMedia.Common.dll
+C:\MyWorks\C# net\SocialMedia\MySocialMedia\MySocialMedia.Common\obj\Debug\net8.0\refint\MySocialMedia.Common.dll
+C:\MyWorks\C# net\SocialMedia\MySocialMedia\MySocialMedia.Common\obj\Debug\net8.0\MySocialMedia.Common.pdb
+C:\MyWorks\C# net\SocialMedia\MySocialMedia\MySocialMedia.Common\obj\Debug\net8.0\ref\MySocialMedia.Common.dll

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MySocialMedia.Client/1.0.0": {
+        "dependencies": {
+          "MySocialMedia.Common": "1.0.0"
+        },
+        "runtime": {
+          "MySocialMedia.Client.dll": {}
+        }
+      },
+      "MySocialMedia.Common/1.0.0": {
+        "runtime": {
+          "MySocialMedia.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MySocialMedia.Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MySocialMedia.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
