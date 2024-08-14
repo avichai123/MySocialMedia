@@ -14,6 +14,7 @@ namespace MySocialMedia.Common.DBTabales
         public string? TOKEN { get; set; }
         public long USER_ID { get; set; }   
         public DateTime DATE_CREATE { get; set; }  
+        public bool IS_DELETE { get; set; } 
         public virtual users users { get; set; }    
     }
 }

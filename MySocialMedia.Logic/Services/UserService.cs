@@ -13,8 +13,10 @@ namespace MySocialMedia.Logic.Services
 {
     public interface IUserService
     {
-        public ResponseLogin Login(string username, string password); 
+        public UserSessionDTO Login(string username, string password); 
         public void Signin(string firstName, string lastName , string username, string password);
+        public List<LimitedUsers> GetUsers(long p_userId);
+        public void LogOut(long p_userId);
     }
     public class UserService: IUserService
     {
@@ -23,16 +25,16 @@ namespace MySocialMedia.Logic.Services
         {
             _db = new SMDbContext();
         }
-        public ResponseLogin Login(string username, string password)
+        public UserSessionDTO Login(string username, string password)
         {
             var u = _db.Connect(db => db.users.FirstOrDefault(x => x.USER_NAME == username && x.PASSWORD == password));
-            if(u == null)
+            if (u == null)
             {
                 Console.WriteLine("NO EXIST");
                 return null;
             }
-            var us = _db.Connect(db => db.user_sessions.OrderByDescending(x => x.DATE_CREATE).FirstOrDefault(x=> x.USER_ID == u.ID));
-            if(us == null)
+            var us = _db.Connect(db => db.user_sessions.OrderByDescending(x => x.DATE_CREATE).FirstOrDefault(x => x.USER_ID == u.ID && !x.IS_DELETE));
+            if (us == null)
             {
                 us = new user_session
                 {
@@ -41,33 +43,20 @@ namespace MySocialMedia.Logic.Services
                     DATE_CREATE = DateTime.Now,
                 };
                 _db.Connect(db => db.user_sessions.Add(us), true);
+               
             }
-             UserSessionDTO userSessionDTO = UserSessionDTO.Parse(us);  
-             List<UsersDTO> data = GetUniqueConvertionPartners(us.USER_ID);
-            //foreach(var partner in data)
-            //{
-            //    Console.WriteLine(partner.ID + " " + partner.FIRST_NAME + " " + partner.LAST_NAME);
-            //}
-            //return UserSessionDTO.Parse(us);
-            return new ResponseLogin(data, userSessionDTO);
+            Console.WriteLine("Sucsses");
+            return UserSessionDTO.Parse(us);
         }
-        public List<UsersDTO> GetUniqueConvertionPartners(long id)
+        public void LogOut(long p_userId)
         {
-            var usersMas = _db.Connect(db => db.user_messages.Where(x => x.SENDER_USER_ID == id || x.RECEIVER_USER_ID == id)
-           .Select(x => x.SENDER_USER_ID == id ? x.RECEIVER_USER_ID : x.SENDER_USER_ID)
-           .Distinct().ToList());
-            List<UsersDTO> chats = new List<UsersDTO>();
-            usersMas.ForEach(usersMas =>
+            _db.Connect(db =>
             {
-                var u = _db.Connect(db => db.users.FirstOrDefault(x => x.ID == usersMas));
-                chats.Add(new UsersDTO
+                foreach (var item in db.user_sessions.Where(x => x.USER_ID == p_userId))
                 {
-                    Id = u.ID,
-                    FirstName = u.FIRST_NAME,
-                    LastName = u.LAST_NAME,
-                });
-            });
-            return chats;   
+                    item.IS_DELETE = true;
+                }
+            }, true);
         }
         public void Signin(string firstName , string lastName , string userName , string password)
         {
@@ -102,5 +91,27 @@ namespace MySocialMedia.Logic.Services
                 }
             }
         }
+        public List<LimitedUsers> GetUsers(long p_userId)
+        {
+            return _db.Connect(db =>
+            {
+                var uid = db.user_messages.Where(x => x.RECEIVER_USER_ID == p_userId || x.SENDER_USER_ID == p_userId)
+                .SelectMany(x => new[] {x.RECEIVER_USER_ID , x.SENDER_USER_ID})
+                .Distinct().ToList();
+                return db.users.Where(x => uid.Contains(x.ID)).Select(x => new LimitedUsers
+                {
+                    Id = x.ID,
+                    FullName = $"{x.FIRST_NAME}{x.LAST_NAME}",
+                    Username = x.USER_NAME
+                }).ToList();
+            });
+        } 
     }
+    public class LimitedUsers
+    {
+        public long Id { get; set; }
+        public string FullName { get; set; }
+        public string Username { get; set; }
+    }
+
 }

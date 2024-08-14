@@ -15,7 +15,7 @@ namespace MySocialMedia.Common.ResponseLogin
         public ResponseLogin(List<UsersDTO> chats, UserSessionDTO userSession)
         {
             this.chats = chats;
-            this.userSession = userSession; 
+            this.userSession = userSession;
         }
     }
 }

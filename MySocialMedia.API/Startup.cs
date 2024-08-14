@@ -16,6 +16,9 @@ namespace MySocialMedia.API
             p_services.AddSwaggerGen();
             p_services.AddMvc();
             p_services.AddSingleton<IUserService>(x => new UserService()); 
+            p_services.AddSingleton<IChatsService>(x =>new  ChatsService());
+            p_services.AddSignalR();
+      
         }
         public void Configure(IApplicationBuilder p_app , IWebHostEnvironment p_env)
         {
@@ -25,8 +28,6 @@ namespace MySocialMedia.API
                 p_app.UseSwagger(); 
                 p_app.UseSwaggerUI(); 
             }
-
-
             p_app.UseRouting();
 
             p_app.UseAuthorization();

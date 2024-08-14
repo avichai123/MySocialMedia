@@ -1,8 +1,26 @@
 {
   "version": 2,
-  "dgSpecHash": "uG5zWn6htaOfjBR7in8dYxq9+QftNaP7u1XJgmsX30fBJfN6jEwaOVgAbjDl9MtcmH6nB/pOrAe6o0f+Wdn1xg==",
+  "dgSpecHash": "iQI02EVNFUulBd6R5NJvENtMNK3yp4rjk3+8ppzrIdqmeXizErZW9MEqFb4b510r091D2tW29JgMKkEHkZZBgQ==",
   "success": true,
   "projectFilePath": "C:\\MyWorks\\C# net\\SocialMedia\\MySocialMedia\\MySocialMedia.Client\\MySocialMedia.Client.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\8.0.7\\microsoft.aspnetcore.connections.abstractions.8.0.7.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\8.0.7\\microsoft.aspnetcore.http.connections.client.8.0.7.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\8.0.7\\microsoft.aspnetcore.http.connections.common.8.0.7.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\8.0.7\\microsoft.aspnetcore.signalr.client.8.0.7.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\8.0.7\\microsoft.aspnetcore.signalr.client.core.8.0.7.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\8.0.7\\microsoft.aspnetcore.signalr.common.8.0.7.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\8.0.7\\microsoft.aspnetcore.signalr.protocols.json.8.0.7.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.extensions.features\\8.0.7\\microsoft.extensions.features.8.0.7.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.1\\microsoft.extensions.logging.abstractions.8.0.1.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
+    "C:\\Users\\1\\.nuget\\packages\\system.threading.channels\\8.0.0\\system.threading.channels.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,12 +1,113 @@
-﻿<Window x:Class="MySocialMedia.Client.MainWindow"
+﻿<Window x:Class="MySocialMedia.Client.LoginWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MySocialMedia.Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Login" Height="400" Width="400">
     <Grid>
-
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF74B9FF" Offset="0"/>
+                <GradientStop Color="#FF367EAD" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid x:Name="logIn" HorizontalAlignment="Center" Height="354" Margin="0,20,0,0" VerticalAlignment="Top" Width="268">
+            <TextBlock Text="LogIn" FontSize="24" FontWeight="Bold"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="103,0,0,0" Foreground="White"/>
+            <Label Content="Username" Margin="0,50,0,0"/>
+            <TextBox x:Name="UserNameBox1"
+                Width="250" Height="30"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="10,70,0,0" 
+                FontSize="14" Padding="5"
+                Background="#FFF" BorderBrush="#FF367EAD"/>
+            <Label Content="Password" Margin="0,100,0,0"/>
+            <PasswordBox x:Name="PasswordBox1"
+                Width="250" Height="30"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="10,120,0,0" 
+                FontSize="14" Padding="5"
+                Background="#FFF" BorderBrush="#FF367EAD"/>
+            <Button Content="Login" Width="100" Height="30"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="85,170,0,0" FontSize="14" FontWeight="Bold"
+                Background="#FF367EAD" Foreground="White"
+                Click="LoginButton_Click"/>
+            <Button Content="Sign Up" Width="100" Height="30"
+                HorizontalAlignment="Center" VerticalAlignment="Top"
+                Margin="0,287,0,0" FontSize="14"
+                Background="Transparent" Foreground="White" BorderBrush="Transparent"
+                Click="SignInButton_Click"
+                Cursor="Hand" 
+                Focusable="False">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <TextBlock TextDecorations="Underline"
+                            Text="{TemplateBinding Content}"
+                            Foreground="{TemplateBinding Foreground}"
+                            HorizontalAlignment="Center" VerticalAlignment="Center"
+                            FontSize="{TemplateBinding FontSize}"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+        <Grid x:Name="signIn" HorizontalAlignment="Center" Height="354" Margin="0,30,0,0" VerticalAlignment="Top" Width="268" Visibility="Hidden">
+            <TextBlock Text="SignIn" FontSize="24" FontWeight="Bold"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="99,0,0,0" Foreground="White"/>
+            <Label Content="First name" Margin="0,50,0,0"/>
+            <TextBox x:Name="FirstNameBox"
+                Width="250" Height="30"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="10,70,0,0" 
+                FontSize="14" Padding="5"
+                Background="#FFF" BorderBrush="#FF367EAD"/>
+            <Label Content="Last name" Margin="0,100,0,0"/>
+            <TextBox x:Name="LastNameBox"
+                Width="250" Height="30"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="10,120,0,0" 
+                FontSize="14" Padding="5"
+                Background="#FFF" BorderBrush="#FF367EAD"/>
+            <Label Content="Username" Margin="0,150,0,0"/>
+            <TextBox x:Name="UserNameBox2"
+                Width="250" Height="30"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="10,170,0,0" 
+                FontSize="14" Padding="5"
+                Background="#FFF" BorderBrush="#FF367EAD"/>
+            <Label Content="Password" Margin="0,200,0,0"/>
+            <PasswordBox x:Name="PasswordBox2"
+                Width="250" Height="30"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="10,220,0,0" 
+                FontSize="14" Padding="5"
+                Background="#FFF" BorderBrush="#FF367EAD"/>
+            <Button Content="SignIn" Width="100" Height="30"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="85,270,0,0" FontSize="14" FontWeight="Bold"
+                Background="#FF367EAD" Foreground="White"
+                Click="RegisterButton_Click"/>
+            <Button Content="Log In" Width="100" Height="30"
+                HorizontalAlignment="Center" VerticalAlignment="Top"
+                Margin="0,305,0,0" FontSize="14"
+                Background="Transparent" Foreground="White" BorderBrush="Transparent"
+                Click="BackToLogIn"
+                Cursor="Hand" 
+                Focusable="False" RenderTransformOrigin="0.532,-0.119">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <TextBlock TextDecorations="Underline"
+                            Text="{TemplateBinding Content}"
+                            Foreground="{TemplateBinding Foreground}"
+                            HorizontalAlignment="Center" VerticalAlignment="Center"
+                            FontSize="{TemplateBinding FontSize}"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
     </Grid>
 </Window>
